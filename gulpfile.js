@@ -94,7 +94,7 @@ gulp.task('default', gulp.parallel(templates, scss, js, images, fonts, function(
     }
   });
 
-  gulp.watch('src/**/*.pug', templates);
+  gulp.watch(['src/**/*.pug','src/**/*.html'], templates);
   gulp.watch('src/**/*.scss', scss);
   gulp.watch('src/**/*.js', js);
 
