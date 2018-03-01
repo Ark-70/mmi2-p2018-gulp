@@ -1,5 +1,8 @@
 @import 'blocs/header';
 @import 'blocs/footer';
+@import 'blocs/garde';
+@import 'blocs/pres';
+// on met vraiment TOUS les css ici ???
 
 @font-face {
  font-family: "Roboto";
@@ -13,4 +16,8 @@ h1 {
   &:hover {
     color: green;
   }
+}
+
+section{
+  height:100vh;
 }
