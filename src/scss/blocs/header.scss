@@ -1,3 +1,11 @@
 header {
-  background: green;
-}
+  background-color: var(--cubegreen);
+  text-transform: uppercase; }
+
+.nav__listcontainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 0.8rem; }

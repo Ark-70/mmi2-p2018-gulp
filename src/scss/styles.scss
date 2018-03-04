@@ -1,23 +1,93 @@
 @import 'blocs/header';
 @import 'blocs/footer';
-@import 'blocs/garde';
-@import 'blocs/pres';
-// on met vraiment TOUS les css ici ???
+@import 'assets/mixines';
+@import 'assets/couleurs';
 
 @font-face {
  font-family: "Roboto";
  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
+html{
+  font-family: "Roboto", Arial;
+}
+
 h1 {
   color: brown;
-  font-family: "Roboto", Arial;
 
   &:hover {
     color: green;
   }
 }
 
+body{
+  margin:0;
+}
+
 section{
   height:100vh;
+}
+
+/********* "PAGE" DE GARDE *********/
+.garde{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cubeorange);
+
+  h{
+    text-align: center;
+  }
+}
+
+
+/********* PRESENTATION *********/
+.pres{
+  position:relative;
+  background-color: var(--cubeblue);
+// background img ?
+}
+.pres__txt{
+  width:70%;
+  margin:auto;
+  text-align: justify;
+  font-style:italic;
+}
+
+.pres__imgcontainer{
+  position:relative;
+  &:hover .pres__image{
+    transform: translateX(-10em);
+  }
+  &:hover .pres__carac{
+    transform: translateX(+10em) translateY(-50%);
+  }
+}
+
+.pres__image{
+  position: relative;
+  transition: transform 1s;
+  width:33%;
+  height:300px;
+  // background-color: red;
+  z-index:1;
+  border:1px solid black;
+  margin:auto;
+  background-color: var(--cubered);
+}
+
+.pres__carac{
+  transition: transform 1s;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding:0;
+
+  li{
+    font-size:1.1rem;
+    list-style: none;
+    margin:1em;
+  }
 }
