@@ -46,6 +46,7 @@ section{
 .pres{
   position:relative;
   background-color: var(--cubeblue);
+  text-align: center;
 // background img ?
 }
 .pres__txt{
@@ -55,34 +56,42 @@ section{
   font-style:italic;
 }
 
-.pres__imgcontainer{
+.carac__container{
+  display:inline-block;
   position:relative;
-  &:hover .pres__image{
+  text-align: initial;
+  margin:auto;
+
+  // width:70%; //pas sûr mais c'est plus cool pour pas hover tout le site
+
+  &:hover .carac__image{
     transform: translateX(-10em);
   }
-  &:hover .pres__carac{
-    transform: translateX(+10em) translateY(-50%);
+  &:hover .carac__txt{
+    transform: translateX(+100%) translateY(-50%);
   }
 }
 
-.pres__image{
-  position: relative;
+.carac__image{
+  display:block;
+  position: relative; //mettre dans la même categorie de z-index que les absolute
   transition: transform 1s;
-  width:33%;
-  height:300px;
+  width:33vw;
+  max-width:440px;//réf au parent
+  // height:400px;
+  //765px breakpoint
+
   // background-color: red;
   z-index:1;
-  border:1px solid black;
   margin:auto;
-  background-color: var(--cubered);
 }
 
-.pres__carac{
+.carac__txt{
   transition: transform 1s;
   position: absolute;
-  left:50%;
+  left:0;
   top:50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
   padding:0;
 
   li{
