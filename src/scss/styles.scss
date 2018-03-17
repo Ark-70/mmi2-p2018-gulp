@@ -60,9 +60,6 @@ section{
   display:inline-block;
   position:relative;
   text-align: initial;
-  margin:auto;
-
-  // width:70%; //pas sûr mais c'est plus cool pour pas hover tout le site
 
   &:hover .carac__image{
     transform: translateX(-10em);
@@ -77,6 +74,7 @@ section{
   position: relative; //mettre dans la même categorie de z-index que les absolute
   transition: transform 1s;
   width:33vw;
+  max-height: 100%;
   max-width:440px;//réf au parent
   // height:400px;
   //765px breakpoint
