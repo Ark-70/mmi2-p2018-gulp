@@ -1,11 +1,62 @@
 header {
-  background-color: var(--cubegreen);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  // transition:height 0.5s ease;
+
+}
+
 
 .nav__listcontainer {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
+  // align-content:center;
+  text-align: center;
   list-style: none;
-  font-size: 0.8rem; }
+  font-size: 1rem;
+  margin:0;
+  padding:0;
+}
+
+.nav__burger{
+  font-size:1.5rem;
+  color:white;
+  border-radius:3px;
+  padding:0 5px;
+  background-color: var(--cubeblue);
+  &:hover{
+    opacity:0.7;
+  }
+}
+
+.nav__marque{
+  font-family:"Montserrat", sans-serif;
+  color: var(--cubeblue);
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.nav__logo{
+  max-height:35px;
+  padding:5px;
+}
+
+.menu{
+  height:0;
+  overflow:hidden;  
+  transition:height 0.5s ease;
+}
+
+.menu__list{
+  font-size: 0.9em;
+  margin:0;
+  padding:10px;
+  list-style: none;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  li{
+    padding:5px;
+  }
+}

@@ -1,6 +1,10 @@
-import { User } from './user';
+document.addEventListener("DOMContentLoaded", function(event) {
 
-console.log('Welcome !');
+  let $burger = document.querySelector('.nav__burger');
+  let $menu = document.querySelector('.menu');
 
-let name = 'Bastien';
-const user = new User(name);
+  $burger.addEventListener("click", function(){
+    $menu.style.height = ($menu.style.height == "auto")? 0 : "auto";
+  });
+
+});

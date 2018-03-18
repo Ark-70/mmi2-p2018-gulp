@@ -3,6 +3,21 @@
 @import 'assets/mixines';
 @import 'assets/couleurs';
 
+
+@font-face {
+  font-family: 'fontello';
+  src: url('./../fonts/fontello.eot?7825420');
+  src: url('./../fonts/fontello.eot?7825420#iefix') format('embedded-opentype'),
+       url('./../fonts/fontello.woff?7825420') format('woff'),
+       url('./../fonts/fontello.ttf?7825420') format('truetype'),
+       url('./../fonts/fontello.svg?7825420#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
+}
 @font-face {
  font-family: "Roboto";
  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
@@ -11,7 +26,15 @@
 html{
   font-family: "Roboto", Arial;
 }
-
+.demo-icon
+{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+}
 h1 {
   color: brown;
 
