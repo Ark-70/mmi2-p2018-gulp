@@ -1,7 +1,8 @@
+@import 'fontello/fontello-codes';
+@import 'assets/variables';
+@import 'assets/mixines';
 @import 'blocs/header';
 @import 'blocs/footer';
-@import 'assets/mixines';
-@import 'assets/couleurs';
 
 
 @font-face {
@@ -15,8 +16,8 @@
   font-style: normal;
 }
 @font-face {
-    font-family: "Montserrat";
-    src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
+  font-family: "Montserrat";
+  src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
 }
 @font-face {
  font-family: "Roboto";
@@ -26,21 +27,13 @@
 html{
   font-family: "Roboto", Arial;
 }
-.demo-icon
-{
+.demo-icon{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   display: inline-block;
   text-decoration: inherit;
   text-align: center;
-}
-h1 {
-  color: brown;
-
-  &:hover {
-    color: green;
-  }
 }
 
 body{
@@ -49,6 +42,7 @@ body{
 
 section{
   height:100vh;
+  min-height:480px;
 }
 
 /********* "PAGE" DE GARDE *********/
@@ -58,66 +52,103 @@ section{
   justify-content: center;
   align-items: center;
   background-color: var(--cubeorange);
-
-  h{
-    text-align: center;
-  }
+  text-align: center;
 }
 
+.garde__img{
+  max-height:55vh;
+  width:20vw;
+  min-width:150px;
+}
 
+h1{
+  font-size:1.8em;
+}
+h2{
+  font-family:"Montserrat",sans-serif;
+  font-weight:normal;
+}
 /********* PRESENTATION *********/
 .pres{
   position:relative;
   background-color: var(--cubeblue);
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 // background img ?
 }
 .pres__txt{
   width:70%;
-  margin:auto;
+  // margin:auto;
   text-align: justify;
-  font-style:italic;
+  font-size:1em;
+  // font-style:italic;
+  @media screen and (min-width: $break-medium) {
+  }
 }
 
 .carac__container{
-  display:inline-block;
   position:relative;
   text-align: initial;
+  display:flex;
+  justify-content: center;
 
-  &:hover .carac__image{
-    transform: translateX(-10em);
-  }
-  &:hover .carac__txt{
-    transform: translateX(+100%) translateY(-50%);
+
+  @media screen and (min-width: $break-medium) {
+    display:flex;
+
+    .carac__image{
+      // display:inline-block;
+
+    }
+    &:hover .carac__image{
+      // transform: translateX(-10em);
+
+    }
+    &:hover .carac__txt{
+      // transform: translateX(+100%) translateY(-50%);
+    }
   }
 }
 
 .carac__image{
-  display:block;
-  position: relative; //mettre dans la même categorie de z-index que les absolute
-  transition: transform 1s;
-  width:33vw;
-  max-height: 100%;
-  max-width:440px;//réf au parent
-  // height:400px;
-  //765px breakpoint
+  display:none;
+  @media screen and (min-width: $break-medium) {
+    position: relative; //mettre dans la même categorie de z-index que les absolute
+    transition: transform 1s;
+    width:33vw;
+    max-height: 100%;
+    max-width:440px;//réf au parent
+    // height:400px;
+    //765px breakpoint
 
-  // background-color: red;
-  z-index:1;
-  margin:auto;
+    // background-color: red;
+    z-index:1;
+    margin:auto;
+
+  }
 }
 
 .carac__txt{
-  transition: transform 1s;
-  position: absolute;
-  left:0;
-  top:50%;
-  transform: translateY(-50%);
+  margin:0;
   padding:0;
-
+  width:70%;
   li{
     font-size:1.1rem;
-    list-style: none;
     margin:1em;
+    em{
+      font-weight:bold;
+    }
   }
+
+  // @media screen and (min-width: $break-medium) {
+  //   transition: transform 1s;
+  //   position: absolute;
+  //   left:0;
+  //   top:50%;
+  //   transform: translateY(-50%);
+  //   padding:0;
+  // }
 }
