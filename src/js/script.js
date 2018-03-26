@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let $menu = document.querySelector('.menu');
 
   $burger.addEventListener("click", function(){
-    $menu.style.height = ($menu.style.height == "auto")? 0 : "auto";
+    $menu.classList.toggle('menu--open');
   });
 
 });

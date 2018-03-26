@@ -45,6 +45,13 @@ section{
   min-height:480px;
 }
 
+.mobile__optional{
+  display:none;
+  @media screen and (min-width: $break-medium) {
+    display:initial;
+  }
+}
+
 /********* "PAGE" DE GARDE *********/
 .garde{
   display:flex;
@@ -68,16 +75,49 @@ h2{
   font-family:"Montserrat",sans-serif;
   font-weight:normal;
 }
+/*********QUALITÉS*************/
+.qualites{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  // align-content: space-around;
+  align-content: center;
+  @media screen and (min-width: $break-medium) {
+
+  }
+}
+
+.qualites__item{
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  width:10rem;
+  height:25%;
+}
+
+.qualites__img{
+  border: 5px solid var(--cubeyellow);
+  border-radius:50%;
+  height:50%;
+
+}
+
+.qualites__legende{
+  // width:10rem;
+  text-align: center;
+}
 /********* PRESENTATION *********/
 .pres{
   position:relative;
-  background-color: var(--cubeblue);
-  text-align: center;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-// background img ?
+  text-align: center;
+  background-color: var(--cubeblue);
+  color:white;
+  // background img ?
 }
 .pres__txt{
   width:70%;
@@ -91,8 +131,8 @@ h2{
 
 .carac__container{
   position:relative;
-  text-align: initial;
   display:flex;
+  text-align: initial;
   justify-content: center;
 
 
@@ -133,11 +173,13 @@ h2{
 
 .carac__txt{
   margin:0;
-  padding:0;
   width:70%;
   li{
     font-size:1.1rem;
     margin:1em;
+    &:last-child{
+      margin-bottom:0;
+    }
     em{
       font-weight:bold;
     }
@@ -151,4 +193,39 @@ h2{
   //   transform: translateY(-50%);
   //   padding:0;
   // }
+}
+
+/***********MAGNET***********/
+.magnet{
+  text-align: justify;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: var(--cubeyellow);
+  // color:white;
+  p{
+    width:70%;
+  }
+}
+
+.magnet__titre{
+  text-align: center;
+  width:80%;
+}
+
+/***********Fluo***********/
+.fluo
+
+/***********Springs***********/
+.springs{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  background-color: var(--cubered);
+
+}
+
+.springs__titre{
+  width: 80%;
 }
