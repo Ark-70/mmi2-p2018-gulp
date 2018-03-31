@@ -45,10 +45,23 @@ section{
   min-height:480px;
 }
 
+h1, h2{
+  text-align: center;
+  padding-left:1vw;
+  padding-right:1vw;
+}
+
+p{
+  text-align: justify;
+  width:70%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .mobile__optional{
   display:none;
   @media screen and (min-width: $break-medium) {
-    display:initial;
+    display:inherit;
   }
 }
 
@@ -77,14 +90,30 @@ h2{
 }
 /*********QUALITÉS*************/
 .qualites{
+  height:auto;
+  min-height: 100vh;
+}
+
+//trick pour que le container cumule min-height 100vh ET min-height 480px
+.qualites__container{
+  min-height:480px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   // align-content: space-around;
   align-content: center;
-  @media screen and (min-width: $break-medium) {
+  @media screen and (min-width: $break-large) {
+    justify-content: center;
+  }
+}
 
+.qualites__side{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media screen and (min-width: $break-large) {
+    flex-direction:row;
   }
 }
 
@@ -92,14 +121,14 @@ h2{
   display:flex;
   flex-flow: column;
   align-items: center;
-  width:10rem;
-  height:25%;
+  // align-content: space-between;
+  // width:20rem;
+  // height:25%;
 }
 
 .qualites__img{
   border: 5px solid var(--cubeyellow);
   border-radius:50%;
-  height:50%;
 
 }
 
@@ -203,18 +232,19 @@ h2{
   align-items:center;
   background-color: var(--cubeyellow);
   // color:white;
-  p{
-    width:70%;
-  }
 }
 
-.magnet__titre{
-  text-align: center;
-  width:80%;
+.magnet__txt{
+  width:70%;
 }
 
 /***********Fluo***********/
-.fluo
+.fluo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cubegreen);
+}
 
 /***********Springs***********/
 .springs{
@@ -222,10 +252,10 @@ h2{
   flex-direction: column;
   justify-content: space-around;
   align-items:center;
+  color:white;
   background-color: var(--cubered);
 
 }
 
 .springs__titre{
-  width: 80%;
 }

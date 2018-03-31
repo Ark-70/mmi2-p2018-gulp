@@ -1,9 +1,13 @@
 $break-medium: 720px;
+$break-large: 1100px;
 
 html{
-  --cubeblue: #0084E3;
   --cubeorange: #FE9D00;
+  --cubeblue: #0084E3;
   --cubegreen: #09DD26;
-  --cubered: #FF2207;
+  // --cubered: #FF2207;
+  --cubered: #d31700;
   --cubeyellow: #EEFF01;
+  --footerbg: #323232;
+  --footercolor: #bbbbbb;
 }
