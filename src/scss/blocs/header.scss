@@ -1,15 +1,24 @@
 header {
+  background-color: #fff;
+  width:100%;
+  border-bottom: 1px solid lightgrey;
   text-transform: uppercase;
+  z-index:9;
   // transition:height 0.5s ease;
   @media screen and (min-width: $break-medium) {
+    position:fixed;
     display:flex;
     justify-content:space-around;
+    align-items: center;
   }
 }
 
 
-.nav__listcontainer {
+.nav__imgandburgercontainer {
   display: flex;
+  // en fixant cette hauteur à 10vh, on fixe juste la première ligne du menu en mobile, mais aussi la hauteur de tous les header en medium screen
+  height:10vh;
+  min-height:50px;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
@@ -80,8 +89,8 @@ header {
   li{
     padding:7px;
     @media screen and (min-width: $break-medium) {
-      margin-left:1vw;
-      margin-right:1vw;
+      padding-left:1.5vw;
+      padding-right:1.5vw;
     }
   }
 }

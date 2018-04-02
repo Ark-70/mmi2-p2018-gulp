@@ -6,29 +6,28 @@
 
 
 @font-face {
-  font-family: 'fontello';
-  src: url('./../fonts/fontello.eot?7825420');
-  src: url('./../fonts/fontello.eot?7825420#iefix') format('embedded-opentype'),
-       url('./../fonts/fontello.woff?7825420') format('woff'),
-       url('./../fonts/fontello.ttf?7825420') format('truetype'),
-       url('./../fonts/fontello.svg?7825420#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Fontello';
+  src: url('./../fonts/fontello.woff?7825420') format('woff')
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
+  font-family: 'Quando';
+  src: url('../fonts/quando.woff2') format('woff2');
 }
 @font-face {
- font-family: "Roboto";
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat.woff') format('woff');
+}
+@font-face {
+ font-family: 'Roboto';
  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 html{
-  font-family: "Roboto", Arial;
+  font-family: 'Montserrat', Arial;
+  font-size:62.5%;
 }
 .demo-icon{
-  font-family: "fontello";
+  font-family: 'Fontello';
   font-style: normal;
   font-weight: normal;
   display: inline-block;
@@ -38,11 +37,11 @@ html{
 
 body{
   margin:0;
+  font-size: 1.6rem;
 }
 
 section{
-  height:100vh;
-  min-height:480px;
+  min-height:90vh;
 }
 
 h1, h2{
@@ -51,12 +50,28 @@ h1, h2{
   padding-right:1vw;
 }
 
+h1{
+  font-size:4rem;
+  font-family: 'Montserrat';
+}
+
+h2{
+  font-size: 3rem;
+  font-family:'Quando',sans-serif;
+  font-weight:normal;
+}
+
 p{
   text-align: justify;
   width:70%;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 10px auto;
+  font-size: 2rem;
 }
+
+strong{
+  font-family:'Quando';
+}
+
 
 .mobile__optional{
   display:none;
@@ -67,12 +82,16 @@ p{
 
 /********* "PAGE" DE GARDE *********/
 .garde{
+  height:90vh;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--cubeorange);
+  background-color: var(--gardebg);
   text-align: center;
+  @media screen and (min-width: $break-medium) {
+    height:100vh;
+  }
 }
 
 .garde__img{
@@ -81,17 +100,11 @@ p{
   min-width:150px;
 }
 
-h1{
-  font-size:1.8em;
-}
-h2{
-  font-family:"Montserrat",sans-serif;
-  font-weight:normal;
-}
 /*********QUALITÉS*************/
 .qualites{
   height:auto;
-  min-height: 100vh;
+  min-height: 90vh;
+  font-size:2rem;
 }
 
 //trick pour que le container cumule min-height 100vh ET min-height 480px
@@ -127,93 +140,81 @@ h2{
 }
 
 .qualites__img{
-  border: 5px solid var(--cubeyellow);
+  width:200px;
+  height:auto;
+  border: 5px solid var(--gardebg);
   border-radius:50%;
-
+  background-color: var(--qualbg);
 }
 
 .qualites__legende{
-  // width:10rem;
+  font-size: 2.5rem;
   text-align: center;
+  padding-top:10px;
 }
 /********* PRESENTATION *********/
 .pres{
+  height:auto;
+  min-height:90vh;
   position:relative;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   text-align: center;
-  background-color: var(--cubeblue);
+  background-color: var(--presbg);
   color:white;
   // background img ?
 }
-.pres__txt{
-  width:70%;
-  // margin:auto;
-  text-align: justify;
-  font-size:1em;
-  // font-style:italic;
-  @media screen and (min-width: $break-medium) {
-  }
-}
 
 .carac__container{
-  position:relative;
+  // position:relative;
+  // margin:20px 0;
   display:flex;
-  text-align: initial;
-  justify-content: center;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
 
 
   @media screen and (min-width: $break-medium) {
-    display:flex;
-
-    .carac__image{
-      // display:inline-block;
-
-    }
-    &:hover .carac__image{
-      // transform: translateX(-10em);
-
-    }
-    &:hover .carac__txt{
-      // transform: translateX(+100%) translateY(-50%);
-    }
+    flex-direction: row;
   }
 }
 
 .carac__image{
-  display:none;
+  // display:none;
+  width:250px;
   @media screen and (min-width: $break-medium) {
-    position: relative; //mettre dans la même categorie de z-index que les absolute
-    transition: transform 1s;
-    width:33vw;
-    max-height: 100%;
-    max-width:440px;//réf au parent
-    // height:400px;
-    //765px breakpoint
-
-    // background-color: red;
-    z-index:1;
-    margin:auto;
-
+    // display:initial;
+    height:100%;
+    width:300px;
   }
 }
 
 .carac__txt{
-  margin:0;
-  width:70%;
+  max-width:85vw;
+  list-style:inside;
+  padding:0;
+  font-size:2rem;
+  text-align: justify;
   li{
-    font-size:1.1rem;
-    margin:1em;
+    margin-top:1em;
+    margin-bottom:1em;
+    &:first-child{
+      margin-top:0;
+    }
     &:last-child{
       margin-bottom:0;
     }
-    em{
-      font-weight:bold;
-    }
   }
 
+  .pres__txt{
+    width:70%;
+    // margin:auto;
+    text-align: justify;
+    // font-style:italic;
+    @media screen and (min-width: $break-medium) {
+    }
+  }
   // @media screen and (min-width: $break-medium) {
   //   transition: transform 1s;
   //   position: absolute;
@@ -223,15 +224,19 @@ h2{
   //   padding:0;
   // }
 }
-
 /***********MAGNET***********/
 .magnet{
   text-align: justify;
   display:flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items:center;
-  background-color: var(--cubeyellow);
+  background-color: var(--magnetbg);
   // color:white;
+}
+
+.magnet__img{
+  display:none;
 }
 
 .magnet__txt{
@@ -243,7 +248,7 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--cubegreen);
+  background-color: var(--fluobg);
 }
 
 /***********Springs***********/
@@ -253,7 +258,7 @@ h2{
   justify-content: space-around;
   align-items:center;
   color:white;
-  background-color: var(--cubered);
+  background-color: var(--springbg);
 
 }
 

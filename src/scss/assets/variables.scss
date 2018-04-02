@@ -1,13 +1,26 @@
 $break-medium: 720px;
-$break-large: 1100px;
+$break-large: 1200px;
 
 html{
+  // avec cette organisation, je peux associer rapidement la section avec une couleur prédéfinie et les interchanger
+  // même si on perd en sémantique, cela reste un compromis entre rapidité de modification et sémantique
+
+  // chaque couleur représente une couleur flashy du cube
   --cubeorange: #FE9D00;
   --cubeblue: #0084E3;
   --cubegreen: #09DD26;
-  // --cubered: #FF2207;
-  --cubered: #d31700;
+  --cubered: #cc1b05;
+  // --cubered: #d31700;
+  // --cubered: #ff4f3a;
   --cubeyellow: #EEFF01;
+
+
+  --gardebg: var(--cubeorange);
+  --qualbg: #fff;
+  --presbg: var(--cubeblue);
+  --magnetbg: var(--cubeyellow);
+  --fluobg: var(--cubegreen);
+  --springbg: var(--cubered);
   --footerbg: #323232;
   --footercolor: #bbbbbb;
 }
