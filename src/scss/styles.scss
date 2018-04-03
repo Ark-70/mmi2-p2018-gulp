@@ -64,7 +64,7 @@ h2{
 p{
   text-align: justify;
   width:70%;
-  margin: 10px auto;
+  margin: 4vh auto;
   font-size: 2rem;
 }
 
@@ -85,13 +85,21 @@ strong{
   height:90vh;
   display:flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--gardebg);
   text-align: center;
   @media screen and (min-width: $break-medium) {
     height:100vh;
   }
+}
+
+.garde__titre{
+  margin:0;
+}
+
+.garde__soustitre{
+  margin:0;
 }
 
 .garde__img{
@@ -235,20 +243,64 @@ strong{
   // color:white;
 }
 
-.magnet__img{
-  display:none;
+.magnet__content{
+  width:100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
 
-.magnet__txt{
-  width:70%;
+.magnet__img{
+  width:30vw;
+  @media screen and (min-width: $break-large) {
+    width:20vw;
+  }
+}
+
+.magnet__imgcontainer{
+  display:none;
+  @media screen and (min-width: $break-medium) {
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &:last-of-type{
+    display:none;
+    @media screen and (min-width: $break-large) {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.magnet__txts{
+  // width:90%;
+  @media screen and (min-width: $break-medium) {
+    width:50vw;
+
+  }
+}
+
+.magnet__singletxt{
+  // width:70%;
+  @media screen and (min-width: $break-medium) {
+    width:auto;
+  }
 }
 
 /***********Fluo***********/
-.fluo{
+.core{
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--fluobg);
+}
+
+.core__img{
+  width:40vw;
+  min-width:350px;
 }
 
 /***********Springs***********/
@@ -259,8 +311,42 @@ strong{
   align-items:center;
   color:white;
   background-color: var(--springbg);
-
 }
 
-.springs__titre{
+.springs__img{
+  // display:none;
+  width:90vw;
+  @media screen and (min-width: $break-medium) {
+    display:block;
+    width:70vw;
+    padding:20px;
+    background-color: rgba(255,255,255,.5);
+  }
+  @media screen and (min-width: $break-large) {
+    width:50vw;
+  }
+}
+
+.springs__bottomcontainer{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  margin:2rem;
+}
+
+.springs__imgG9{
+  display:block;
+  width:60vw;
+  @media screen and (min-width: $break-medium) {
+    width:35vw;
+  }
+  @media screen and (min-width: $break-large) {
+    width:20vw;
+  }
+}
+
+.springs__txt--second{
+  margin:0;
+  width:40vw;
 }

@@ -25,7 +25,7 @@ header {
   // align-content:center;
   text-align: center;
   list-style: none;
-  font-size: 1rem;
+  font-size: 2rem;
   margin:0;
   padding:0;
 }
@@ -41,7 +41,6 @@ header {
   }
   @media screen and (min-width: $break-medium) {
     display:none;
-
   }
 }
 
@@ -52,8 +51,8 @@ header {
   justify-content: center;
   align-items:center;
   @media screen and (min-width: $break-medium) {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
   }
 }
 

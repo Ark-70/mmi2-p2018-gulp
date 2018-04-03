@@ -5,8 +5,8 @@
   <div class="garde__blank"></div>
   <!-- pour ne pas avoir l'image sous le header fixed -->
   <img class="garde__img" src="img/cubegarde.png" alt="">
-  <h1>GAN356 Air UM</h1>
-  <h2>Avec Système de Positionnement Aimanté</h2>
+  <h1 class="garde__titre">GAN356 Air UM</h1>
+  <h2 class="garde__soustitre">Avec Système de Positionnement Aimanté</h2>
 </section>
 <section class="qualites">
   <h2 class="qualites__titre">Le cube des plus grands speedcubers</h2>
@@ -50,23 +50,28 @@
 </section>
 <section class="magnet">
   <h2 class="magnet__titre">Système de Positionnement Aimanté</h2>
-  <img class="magnet__img" src="" alt="">
-  <p class="mobile__optional">À l'origine inspiré par Chris Tran, ajouter des aimants dans les cubes pour augmenter sa stabilisation est devenu populaire en 2016. GAN a aperçu cette tendance, et pour permettre aux speedcubers sans materiel ni outils d'apprécier l'expérience d'un Rubik's Cube léger avec des aimants, nous avons créé le GAN356 Air UM. C'est le premier cube 3x3 magnétique produit en masse.</p>
-  <p>Le système de positionnement magnétique est une nouvelle technologie dans le cubing, qui utilise l'attraction des aimants parcemés dans les 20 pièces du cube. L'attraction entre ces pièces produisent une sensation unique et augmente significativement l'alignement des pièces, et donc la fluidité des mouvements du speedcuber.</p>
+  <div class="magnet__content">
+    <!-- imgcontainer pour empecher la deformation flex sur les img -->
+    <div class="magnet__imgcontainer"><img class="magnet__img" src="img/magnets.png" alt=""></div>
+    <div class="magnet__txts"><p class="magnet__singletxt mobile__optional">À l'origine inspiré par Chris Tran, ajouter des aimants dans les cubes pour augmenter sa stabilisation est devenu populaire en 2016. GAN a aperçu cette tendance, et pour permettre aux speedcubers sans materiel ni outils d'apprécier l'expérience d'un Rubik's Cube léger avec des aimants, nous avons créé le GAN356 Air UM. C'est le premier cube 3x3 magnétique produit en masse.</p>
+    <p class="magnet__singletxt">Le système de positionnement magnétique est une nouvelle technologie dans le cubing, qui utilise l'attraction des aimants parcemés dans les 20 pièces du cube. L'attraction entre ces pièces produisent une sensation unique et augmente significativement l'alignement des pièces, et donc la fluidité des mouvements du speedcuber.</p></div>
+    <div class="magnet__imgcontainer"><img class="magnet__img" src="img/magnets2.png" alt=""></div>
+  </div>
 </section>
-<section class="fluo">
-  <h2 class="fluo__titre">Embouts des pièces fluorescents</h2>
-  <p class="mobile__optional"></p>
-  <img src="" alt="">
-  <p></p>
+<section class="core">
+  <h2 class="core__titre">Un <em>core</em> à l'image des ambitions de la marque</h2>
+  <img class="core__img" src="img/core.png" alt="">
+  <p>Parce que la rapidité se travaille d'abord au coeur des choses, on met beaucoup d'importance sur le <em>core</em> de notre cube pour que la qualité externe du cube s'ensuive.</p>
 </section>
 
 <section class="springs">
   <h2 class="springs__titre">Des ressorts choisis par les meilleurs</h2>
+  <img class="springs__img" src="img/springs.png" alt="image_ressorts">
   <p class="springs__txt">Notre pack de ressorts GES (Gan Elasticity System) est conçu pour proposer 7 élasticités différentes et tout autant de sensations. Avec chaque couleur correspondant à un type de ressort différent, nous sommes sûrs de vous proposer des ressorts adaptés pour vous.</p>
-  <img src="" alt="image_ressorts">
-  <p class="springs__txt mobile__optional">D'après nos top speedcubers, les ressorts généralement les plus adaptés pour ce cube sont les violets G9, c'est pourquoi nous les avons choisis comme ressorts par défaut.</p>
-  <img class="mobile__optional" src="" alt="ressort violet dans un cube">
+  <div class="springs__bottomcontainer">
+    <img class="springs__imgG9" src="img/g9.png" alt="ressort violet dans un cube">
+    <p class="springs__txt springs__txt--second mobile__optional">D'après nos top speedcubers, les ressorts généralement les plus adaptés pour ce cube sont les violets G9, c'est pourquoi nous les avons choisis comme ressorts par défaut.</p>
+</div>
 </section>
 
 <!-- Faire du full-mito avec le core et le sac -->
