@@ -1,0 +1,57 @@
+/***********MAGNET***********/
+.magnet{
+  text-align: justify;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  background-color: var(--magnetbg);
+  // color:white;
+}
+
+.magnet__content{
+  width:100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.magnet__img{
+  width:30vw;
+  @media screen and (min-width: $break-large) {
+    width:20vw;
+  }
+}
+
+.magnet__imgcontainer{
+  display:none;
+  @media screen and (min-width: $break-medium) {
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &:last-of-type{
+    display:none;
+    @media screen and (min-width: $break-large) {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.magnet__txts{
+  // width:90%;
+  @media screen and (min-width: $break-medium) {
+    width:50vw;
+
+  }
+}
+
+.magnet__singletxt{
+  // width:70%;
+  @media screen and (min-width: $break-medium) {
+    width:auto;
+  }
+}

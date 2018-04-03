@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Fontello';
+  src: url('./../fonts/fontello.woff?7825420') format('woff')
+}
+@font-face {
+  font-family: 'Quando';
+  src: url('../fonts/quando.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat.woff') format('woff');
+}
+@font-face {
+ font-family: 'Roboto';
+ src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+html{
+  font-family: 'Montserrat', Arial;
+  font-size:62.5%;
+}
+
+.demo-icon{
+  font-family: 'Fontello';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+}
+
+.anchor{
+  visibility:hidden;
+  position:relative;
+  top:-10vh;
+}
+
+body{
+  margin:0;
+  font-size: 1.6rem;
+}
+
+section{
+  min-height:90vh;
+}
+
+h1{
+  font-size:4rem;
+  font-family: 'Montserrat';
+  text-align: center;
+  padding-left:1vw;
+  padding-right:1vw;
+}
+
+h2{
+  font-size: 3rem;
+  font-family:'Quando',sans-serif;
+  font-weight:normal;
+  text-align: center;
+  padding-left:1vw;
+  padding-right:1vw;
+}
+
+p{
+  text-align: justify;
+  width:70%;
+  margin: 4vh auto;
+  font-size: 2rem;
+}
+
+strong{
+  font-family:'Quando';
+}
+
+
+.mobile__optional{
+  display:none;
+  @media screen and (min-width: $break-medium) {
+    display:inherit;
+  }
+}
