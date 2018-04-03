@@ -35,6 +35,12 @@ html{
   text-align: center;
 }
 
+.anchor{
+  visibility:hidden;
+  position:relative;
+  top:-10vh;
+}
+
 body{
   margin:0;
   font-size: 1.6rem;
@@ -44,21 +50,21 @@ section{
   min-height:90vh;
 }
 
-h1, h2{
-  text-align: center;
-  padding-left:1vw;
-  padding-right:1vw;
-}
-
 h1{
   font-size:4rem;
   font-family: 'Montserrat';
+  text-align: center;
+  padding-left:1vw;
+  padding-right:1vw;
 }
 
 h2{
   font-size: 3rem;
   font-family:'Quando',sans-serif;
   font-weight:normal;
+  text-align: center;
+  padding-left:1vw;
+  padding-right:1vw;
 }
 
 p{
