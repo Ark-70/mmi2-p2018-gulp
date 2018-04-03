@@ -62,7 +62,6 @@ header {
 }
 
 .menu{
-  //fallait que j'augmente le poids du selecteur sinon le height:0 rajouté par le js prend le dessus
   font-weight:bold;
   font-size:1em;
   height:0;
@@ -85,12 +84,18 @@ header {
   display:flex;
   flex-flow:row wrap;
   justify-content: space-around;
-  li{
-    padding:7px;
-    @media screen and (min-width: $break-medium) {
-      padding-left:1.5vw;
-      padding-right:1.5vw;
-    }
+}
+
+.menu__link{
+  text-decoration: none;
+  color:inherit;
+  padding:7px;
+  &:hover{
+    color: var(--cubeblue);
+  }
+  @media screen and (min-width: $break-medium) {
+    padding-left:1.5vw;
+    padding-right:1.5vw;
   }
 }
 
