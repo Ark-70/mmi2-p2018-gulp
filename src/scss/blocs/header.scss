@@ -1,14 +1,14 @@
 header {
   background-color: #fff;
-  width:100%;
+  width: 100%;
   border-bottom: 1px solid lightgrey;
   text-transform: uppercase;
-  z-index:9;
+  z-index: 9;
   // transition:height 0.5s ease;
   @media screen and (min-width: $break-medium) {
-    position:fixed;
-    display:flex;
-    justify-content:space-around;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
   }
 }
@@ -17,8 +17,8 @@ header {
 .nav__imgandburgercontainer {
   display: flex;
   // en fixant cette hauteur à 10vh, on fixe juste la première ligne du menu en mobile, mais aussi la hauteur de tous les header en medium screen
-  height:10vh;
-  min-height:50px;
+  height: 10vh;
+  min-height: 50px;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
@@ -26,30 +26,30 @@ header {
   text-align: center;
   list-style: none;
   font-size: 2rem;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__burger{
-  font-size:1.5rem;
-  color:white;
-  border-radius:3px;
-  padding:0 5px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 3px;
+  padding: 0 5px;
   background-color: var(--cubeblue);
   &:hover{
-    opacity:0.7;
+    opacity: 0.7;
   }
   @media screen and (min-width: $break-medium) {
-    display:none;
+    display: none;
   }
 }
 
 .nav__marque{
-  font-family:"Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--cubeblue);
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   @media screen and (min-width: $break-medium) {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
@@ -57,76 +57,76 @@ header {
 }
 
 .nav__logo{
-  max-height:35px;
-  padding:5px;
+  max-height: 35px;
+  padding: 5px;
 }
 
 .menu{
-  font-weight:bold;
-  font-size:1em;
-  height:0;
-  overflow:hidden;
-  transition:height 0.5s ease;
+  font-weight: bold;
+  font-size: 1em;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
   @media screen and (min-width: $break-medium) {
-    height:auto;
+    height: auto;
   }
 }
 
 .menu--open{
-  height:auto;
+  height: auto;
 }
 
 .menu__list{
   font-size: 0.9em;
-  margin:0;
-  padding:10px;
+  margin: 0;
+  padding: 10px;
   list-style: none;
-  display:flex;
-  flex-flow:row wrap;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 
 .menu__link{
   text-decoration: none;
-  color:inherit;
-  padding:7px;
+  color: inherit;
+  padding: 7px;
   &:hover{
     color: var(--cubeblue);
   }
   @media screen and (min-width: $break-medium) {
-    padding-left:1.5vw;
-    padding-right:1.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
   }
 }
 
 .fixed__icons{
-  position:fixed;
-  right:10vw;
-  bottom:10vh;
-  z-index:2;
+  position: fixed;
+  right: 10vw;
+  bottom: 10vh;
+  z-index: 2;
 }
 
 .fixed__buy{
   font-size:1em;
   background-color: var(--cubeblue);
-  color:white;
-  padding:3px;
-  text-decoration:none;
-  border:1px solid white;
+  color: white;
+  padding: 3px;
+  text-decoration: none;
+  border: 1px solid white;
   border-radius: 2px;
   @media screen and (min-width: $break-medium) {
-    font-size:2em;
-    padding:2px;
+    font-size: 2em;
+    padding: 2px;
   }
 }
 
 .fixed__up{
-  font-size:1.1em;
-  padding:5px;
+  font-size: 1.1em;
+  padding: 5px;
   color: grey;
   background-color: #fff;
   border-radius: 2px;
   @media screen and (min-width: $break-medium) {
-    font-size:2.2em;
+    font-size: 2.2em;
   }
 }

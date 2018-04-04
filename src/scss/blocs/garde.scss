@@ -1,27 +1,27 @@
 /********* "PAGE" DE GARDE *********/
-.garde{
-  height:90vh;
-  display:flex;
+.garde {
+  height: 90vh;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: var(--gardebg);
   text-align: center;
   @media screen and (min-width: $break-medium) {
-    height:100vh;
+    height: 100vh;
   }
 }
 
-.garde__titre{
-  margin:0;
+.garde__titre {
+  margin: 0;
 }
 
-.garde__soustitre{
-  margin:0;
+.garde__soustitre {
+  margin: 0;
 }
 
-.garde__img{
-  max-height:55vh;
-  width:20vw;
-  min-width:150px;
+.garde__img {
+  max-height: 55vh;
+  width: 20vw;
+  min-width: 150px;
 }
